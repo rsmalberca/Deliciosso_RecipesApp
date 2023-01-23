@@ -18,7 +18,7 @@ function Veggie() {
       setVeggie(JSON.parse(check));
     } else {
       const apiData = await axios(
-        `https://api.spoonacular.com/recipes/random?apiKey=${REACT_APP_API_KEY}&number=12&tags=vegetarian`
+        `https://api.spoonacular.com/recipes/random?apiKey=${REACT_APP_API_KEY}&number=16&tags=vegetarian`
       );
       localStorage.setItem("veggie", JSON.stringify(apiData.data.recipes));
       setVeggie(apiData.data.recipes);
@@ -31,10 +31,10 @@ function Veggie() {
         <h3>Our Vegetarian Picks</h3>
         <Splide
           options={{
-            perPage: 3,
+            perPage: 4,
             arrows: false,
             drag: "free",
-            gap: "5rem",
+            gap: "4rem",
           }}
         >
           {veggie.map((recipe) => {

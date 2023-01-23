@@ -12,10 +12,26 @@ body {
     sans-serif;
   -webkit-font-smoothing: antialiased;
   -moz-osx-font-smoothing: grayscale;
-  margin: 0% 15%;
+  margin: 0% 10%;
 }
 
 code {
   font-family: source-code-pro, Menlo, Monaco, Consolas, "Courier New",
     monospace;
+}
+
+h4 {
+  font-size: 1rem;
+  color: rgb(82, 82, 82);
+}
+
+h3 {
+  font-size: 1.5rem;
+  color: rgb(82, 82, 82);
+  line-height: 2.5rem;
+  margin: 2rem 0rem;
+}
+
+a {
+  color: rgb(82, 82, 82);
 }
