@@ -2,16 +2,24 @@ import React from "react";
 import styled from "styled-components";
 import { useState } from "react";
 import { BiSearch } from "react-icons/bi";
+import { useNavigate } from "react-router-dom";
 
 function SearchBar() {
   const [input, setInput] = useState("");
+  const navigate = useNavigate();
 
   const inputChangeHandler = (e) => {
     setInput(e.target.value);
   };
 
   const formSubmitHandler = (e) => {
-    e.preventDefault();
+    if (input && input[0] !== " ") {
+      e.preventDefault();
+      navigate("/searched/" + input);
+    } else {
+      e.preventDefault();
+      alert("Word is required to initialize the search");
+    }
   };
 
   return (
