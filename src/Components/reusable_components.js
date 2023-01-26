@@ -97,7 +97,7 @@ export const StyledNavLink = styled(NavLink)`
   }
 
   &.active {
-    background: linear-gradient(to right, #f27121, #e94057);
+    background: linear-gradient(to right, #7d7d7d, #15c7b6);
 
     svg {
       color: white;
