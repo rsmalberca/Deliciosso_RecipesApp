@@ -3,6 +3,7 @@ import { useEffect, useState } from "react";
 import { useParams } from "react-router-dom";
 import axios from "axios";
 import { Grid, Card } from "../Components/reusable_components";
+import { Link } from "react-router-dom";
 const { REACT_APP_API_KEY } = process.env;
 
 function Searched() {
@@ -28,8 +29,10 @@ function Searched() {
       {searched.map((recipe) => {
         return (
           <Card key={recipe.id}>
-            <img src={recipe.image} alt={recipe.title} />
-            <h4>{recipe.title}</h4>
+            <Link to={`/recipe/${recipe.id}`}>
+              <img src={recipe.image} alt={recipe.title} />
+              <h4>{recipe.title}</h4>
+            </Link>
           </Card>
         );
       })}
