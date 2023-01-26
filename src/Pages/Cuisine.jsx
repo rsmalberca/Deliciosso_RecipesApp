@@ -3,6 +3,7 @@ import styled from "styled-components";
 import { motion } from "framer-motion";
 import { Link, useParams } from "react-router-dom";
 import axios from "axios";
+import { Grid, Card } from "../Components/reusable_components";
 const { REACT_APP_API_KEY } = process.env;
 
 function Cuisine() {
@@ -19,7 +20,18 @@ function Cuisine() {
   useEffect(() => {
     getCuisine(params.category);
   }, [params.category]);
-  return <div>Cuisine</div>;
+  return (
+    <Grid>
+      {cuisine.map((recipe) => {
+        return (
+          <Card key={recipe.id}>
+            <img src={recipe.image} alt={recipe.title} />
+            <h4>{recipe.title}</h4>
+          </Card>
+        );
+      })}
+    </Grid>
+  );
 }
 
 export default Cuisine;
