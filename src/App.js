@@ -8,7 +8,7 @@ function App() {
   return (
     <div className="App">
       <Nav>
-        <Logo to={"/"}>
+        <Logo to={"/Deliciosso_RecipesApp/"}>
           {" "}
           <GiForkKnifeSpoon />
           Deliciosso
