@@ -104,3 +104,47 @@ export const StyledNavLink = styled(NavLink)`
     }
   }
 `;
+
+export const DetailContainer = styled.div`
+  margin-top: 10rem;
+  margin-bottom: 5rem;
+  display: flex;
+  .active {
+    background: linear-gradient(35deg, #494949, #313131);
+    color: white;
+  }
+  h2 {
+    margin-bottom: 2rem;
+  }
+
+  img {
+    border-radius: 2rem;
+  }
+`;
+
+export const Button = styled.button`
+  padding: 1rem 2rem;
+  color: #313131;
+  background: white;
+  border: 2px solid black;
+  border-radius: 1rem;
+  margin-right: 2rem;
+  font-weight: 600;
+  cursor: pointer;
+`;
+
+export const Description = styled.div`
+  margin-left: 10rem;
+  li {
+    font-size: 1rem;
+    line-height: 2rem;
+  }
+  ul {
+    margin-top: 2rem;
+  }
+  h3 {
+    font-size: 1rem;
+    color: black;
+    font-weight: normal;
+  }
+`;
