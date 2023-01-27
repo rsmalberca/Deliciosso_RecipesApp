@@ -15,7 +15,7 @@ function SearchBar() {
   const formSubmitHandler = (e) => {
     if (input && input[0] !== " ") {
       e.preventDefault();
-      navigate("/Deliciosso_RecipesApp/searched/" + input);
+      navigate("/searched/" + input);
     } else {
       e.preventDefault();
       alert("Word is required to initialize the search");

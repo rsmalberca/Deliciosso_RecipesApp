@@ -28,7 +28,7 @@ function Cuisine() {
       {cuisine.map((recipe) => {
         return (
           <Card key={recipe.id}>
-            <Link to={`/Deliciosso_RecipesApp/recipe/${recipe.id}`}>
+            <Link to={`/recipe/${recipe.id}`}>
               <img src={recipe.image} alt={recipe.title} />
               <h4>{recipe.title}</h4>
             </Link>
