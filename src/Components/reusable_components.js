@@ -1,5 +1,6 @@
 import styled from "styled-components";
-import { NavLink } from "react-router-dom";
+import { Link, NavLink } from "react-router-dom";
+import { motion } from "framer-motion";
 
 export const Wrapper = styled.div`
   margin: 4rem 0rem;
@@ -46,7 +47,7 @@ export const Gradient = styled.div`
   background: linear-gradient(rgba(0, 0, 0, 0), rgba(0, 0, 0, 0.5));
 `;
 
-export const Grid = styled.div`
+export const Grid = styled(motion.div)`
   display: grid;
   grid-template-columns: repeat(auto-fit, minmax(20rem, 1fr));
   grid-gap: 3rem;
@@ -146,5 +147,27 @@ export const Description = styled.div`
     font-size: 1rem;
     color: black;
     font-weight: normal;
+  }
+`;
+
+export const Logo = styled(Link)`
+  text-decoration: none;
+  font-size: 2rem;
+  font-weight: 400;
+  font-family: "Lobster", cursive;
+  margin-left: 0.5rem;
+`;
+
+export const Nav = styled.div`
+  padding: 2rem 0rem 1rem 0rem;
+  display: flex;
+  justify-content: space-between;
+  align-items: center;
+  color: rgb(82, 82, 82);
+  svg {
+    font-size: 2rem;
+  }
+  div {
+    font-size: 0.85rem;
   }
 `;
