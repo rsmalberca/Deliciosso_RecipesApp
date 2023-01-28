@@ -18,7 +18,6 @@ function RecipeDetail() {
       `https://api.spoonacular.com/recipes/${id}/information?apiKey=${REACT_APP_API_KEY}`
     );
     setDetail(apiData.data);
-    // console.log(apiData.data.extendedIngredients);
   };
 
   const buttonClickHandler = (e) => {
